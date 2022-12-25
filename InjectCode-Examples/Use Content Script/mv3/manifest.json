@@ -1,0 +1,15 @@
+{
+  "name": "Adding melonads using Content Script)",
+  "version": "1.0",
+  "description": "Ads and more",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["melonads.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "manifest_version": 3
+
+}
