@@ -20,7 +20,7 @@
     ads = [
           {name: "",shape: "top"},
           {name: "",shape: "side"},
-          {name: "",shape: "bottom"}
+          {name: "",shape: "corner"}
           ] 
 
    types = [
@@ -47,9 +47,11 @@
 
                const image = document.createElement("img");
 
-        console.log(fileName)
-
-               image.src = `https://cne360web.com/graphics/` + fileName;
+               //image.src = `https://cne360web.com/graphics/` + fileName;
+               
+               image.src = `https://cdn.pandacrp.com/rinoads/${realFileName}`;
+               
+          console.log(fileName)     // for testing
 
                //Make image parent
                const image_container = document.createElement("div");
@@ -78,7 +80,7 @@
         if (!document.querySelector("style#melonAds")){
            const style = document.createElement("style");
            style.id = "melonAds";
-           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 50em; display: flex; margin-bottom: 1em; left: 50%; top: 50px; transform:translateX(-50%); position: fixed; aspect-ratio: 6/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 100%; height: 100%; overflow: hidden;} .melonAds-banner img{ width: 100%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
+           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 50em; display: flex; margin-bottom: 1em; left: 50%; top: 50px; transform:translateX(-50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 100%; height: 100%; overflow: hidden;} .melonAds-banner img{ width: 100%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
            document.body.prepend(style); 
        }
        break;
@@ -87,17 +89,17 @@
        if (!document.querySelector("style#melonAds")){
            const style = document.createElement("style");
            style.id = "melonAds";
-           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 15em; display: flex; margin-bottom: 1em; left: 75%; top: 200px; transform:translateX(-50%); position: fixed; aspect-ratio: 6/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 80%; height: 1000%; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
+           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 15em; display: flex; margin-bottom: 1em; left: 75%; top: 200px; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 80%; height: 2000%; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/9; background-color: red;color: black;}"
            document.body.prepend(style);
        }
        break;
        //BOTTOM
-        case "bottom":
+        case "corner":
             if (!document.querySelector("style#melonAds")){
                 const style = document.createElement("style");
                 style.id = "melonAds";
-                style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 40em; display: flex; margin-bottom: 1em; left: 50%; bottom: 0; transform:translateX(-50%); position: fixed; aspect-ratio: 6/1; transition-property: bottom; transition-duration: 1s;} .melonAds-image-container{ width: 100%; height: 100%; overflow: hidden;} .melonAds-banner img{ width: 100%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: white;}"
-                document.body.appendChild(style);
+                style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 40em; display: flex; margin-bottom: 1em; left: 50%; top: 0; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;} .melonAds-image-container{ width: 75%; height: 75%; margin-right: 0; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/9; background-color: red;color: white;}"
+                document.body.prepend(style);
             }
                 break;
         default:
@@ -130,13 +132,31 @@
 // ****       Do not add a "," to the last file name
 // ******************************************************************************//
 
-verifiedAds = ["side-3agents.png",                                   
+verifiedAds = [ "side-3YrYLye.png",
+                "top-5lhydyw.png",
+                "corner-6zThWbb.png",
+                "side-96H8nTV.png",
+                "top-fvStHFy.png",
+                "corner-IfbHv4Q.png",
+                "corner-ItsSnbk.png",
+                "top-kbPhzlY.png",
+                "side-kLwpaWL.png",
+                "corner-m0TQ3fo.png",
+                "corner-m5JlrL0.png",
+                "side-maE1OQk.png",
+                "corner-mB3fEew.png",
+                "top-mJJjZFk.png",
+                "top-VoarYuW.png"
+]
+
+
+// ************Don't use these for the time being *********************//
+/* verifiedAds = ["side-3agents.png",                                   
                "side-happyagent.png",
                "side-headsets.png",
                "top-headsets.png",
                "bottom-hairloss.png"  
-               ];
-
+               ]; */      
 // ******************************************************************************//
 
 // randomly select the ad
@@ -144,8 +164,11 @@ var int = Math.floor(Math.random() * verifiedAds.length);
 const fileName = verifiedAds[int];
 // extract the position on the screen from the filename
 const position = fileName.split("-");
+// now extract just the filename
+ const realFileName = position[1];
 // for testing and debugging down the line
 console.log ("position = " + position[0]) 
+console.log ("realFileName = "+ realFileName)
 
-new MakeBanner(position[0], "banner-centered", fileName);
+new MakeBanner(position[0], "banner-centered", realFileName);
 
