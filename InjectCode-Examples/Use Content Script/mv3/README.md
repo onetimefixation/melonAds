@@ -1,72 +1,45 @@
 # MELON Ads
-Used by viewers to spam emotes in chat
-When the chat reaches a certain threshold, this will trigger a "!boom" command
-This "!boom" command spams a predefined overlay with emotes
+Used to create randon ads on the virtual machine
 
-The emote configuration is controled by the features of Stream Elements
+Version 1 (current) - the names of the ads are hardcoded in melonads.js.  The must EXACTLY match the file names of the .png files on the server.
 
+Version 2 (future) - give user the ability to upload files to common folder. The issue is reading the directory on the client (may not be allowed)
 
 ## Getting Started
 
-Follow the instructions below to install these additional commands to your Twitch channel
+This is a CHROME extention.
 
-### Prerequisites
+Because of web security, the files will not be able to reside on a client machine (VM). Rather, it will temporarily be house on a server.
 
+### Adding files to the application
 
+  <<<< ON THE SERVER >>>>
+The .png files must follow the specific specifications in order to work properly:
 
+   - TOP CENTER  --- an ad to appear on the top (center) it must be 600px x 100px
+      the filename MUST start with "top-" (example: "top-headsets.png") NO SPACES!!!!!
 
-### Installing to Stream Elements and OBS
+   - RIGHT CORNER --- an ad to appear on the top (center) it must be 400px x 250px
+      the filename MUST start with "corner-" (example: "corner-headsets.png") NO SPACES!!!!!
 
-
-1) In Stream Elements
-    - Chat Commands
-        kappagen / boom
-    My Overlays
-        > create new
-        > Position, size and style
-            ?????
-        >    Center Widget
-        >    SAVE
-        > Go to EMOTESPLOSIONS
-        > SELECT EMOTES
-        >    SAVE
-
-    - Copy URL (on top right (chain))
+   - RIGHT SIDE --- an ad to appear on the top (center) it must be 106px x 399px
+      the filename MUST start with "side-" (example: "side-headsets.png") NO SPACES!!!!!
 
 
-OBS
-    Create New Source - BROWSER
-    Name it
-    Paste the copied URL
-    Change WIDTH and HEIGHT to ???????????????
+ <<<< WITHIN THE CHROME APPLICATION >>>>
 
-## Add the RP_Creds code where applicable to the emote_meter file
-
-add it between the following lines :
-
-//*********************  Goes Here ****************/
+   - the filenames are hardcoded in MANIFEST.JS and they must EXACTLY match the names on the server in order to be recognized (see above).
+   - if a new filename is added to the manifest.js file, make sure to reload the CHROME extention on the local machine.
 
 
+### Installing on the VM
 
-//*********************  Ends Here ****************/
+1) Install the two files MANIFEST.JS and MELONAD.JS in the folder that will be used to unpack the CHROME extension.
 
-## Configurable Parameters ( in emote_meter_vxx.js)
-
-Look for the box that says :
-// **********************************  YOU CAN CHANGE THESE  ********************************* //
-
-totalEmotesAllowed = nn;               // TOTAL # OF EMOTES NEEDED TO GOET TO 100%
-max_Emotes_Accepted_Per_Message = nn;  // ONLY RECOGNIZE THESE MANY EMOTES PER MESSAGE PER USER 
-startToWiggle = nn;                    // THIS IS DISABLED AT THIS TIME //
-marqueeTimer = 11000;                  // TIME IN MILLISECS FOR THE TRAIN EMOTES TO RUN e.g. 11000 = 11 secs
-delayTime = 60000;                     // 1 sec = 1000 , 30 sec = 30000 
-const endMessage = "message"           // A MESSAGE CAN BE ADDED JUST BEFORE THE METER DISSAPEARS
+2) As is, the extension is set to work on ALL websites. If there are specific websites to monitor, enter the website URL's in the appropriate lines in the manifest file.  i.e replace the <all_urls> in the content_scripts element with the desired website.
 
 
 ## Built With
 
-index.html
-styles.css
-emote_meter.js
-package.json
-tmi.min.js 
+manifest.json
+melonads.js
