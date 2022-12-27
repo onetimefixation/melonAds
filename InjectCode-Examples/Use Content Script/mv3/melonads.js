@@ -142,16 +142,6 @@ verifiedAds = [ "side-headsets.png",
                 "top-hunter2.png"
 ]
 
-
-// ************Don't use these for the time being *********************//
-/* verifiedAds = ["side-3agents.png",                                   
-               "side-happyagent.png",
-               "side-headsets.png",
-               "top-headsets.png",
-               "bottom-hairloss.png"  
-               ]; */      
-// ******************************************************************************//
-
 // randomly select the ad
 var int = Math.floor(Math.random() * verifiedAds.length);
 const fileName = verifiedAds[int];

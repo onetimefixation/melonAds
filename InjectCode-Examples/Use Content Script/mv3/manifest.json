@@ -1,7 +1,7 @@
 {
-  "name": "Adding melonads using Content Script)",
+  "name": "Melonads using Content Script)",
   "version": "1.0",
-  "description": "Ads and more",
+  "description": "Melon Ads",
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
