@@ -47,9 +47,11 @@
 
                const image = document.createElement("img");
 
+
+               //image.src = "https://cne360web.com/graphics/side-newhappyagent.png";
                //image.src = `https://cne360web.com/graphics/` + fileName;
-               
                image.src = `https://cdn.pandacrp.com/rinoads/${realFileName}`;
+               
                
           console.log(fileName)     // for testing
 
@@ -80,7 +82,7 @@
         if (!document.querySelector("style#melonAds")){
            const style = document.createElement("style");
            style.id = "melonAds";
-           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 50em; display: flex; margin-bottom: 1em; left: 50%; top: 50px; transform:translateX(-50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 100%; height: 100%; overflow: hidden;} .melonAds-banner img{ width: 100%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
+           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 50em; display: flex; margin-bottom: 1em; left: 50%; top: 50px; transform:translateX(-50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 100%; height: 15%; overflow: hidden;} .melonAds-banner img{ width: 100%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
            document.body.prepend(style); 
        }
        break;
@@ -89,16 +91,16 @@
        if (!document.querySelector("style#melonAds")){
            const style = document.createElement("style");
            style.id = "melonAds";
-           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 15em; display: flex; margin-bottom: 1em; left: 75%; top: 200px; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 80%; height: 2000%; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/9; background-color: red;color: black;}"
+           style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 15em; display: flex; margin-bottom: 1em; left: 75%; top: 200px; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;}.melonAds-image-container{ width: 100%; height: 500%; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: black;}"
            document.body.prepend(style);
        }
        break;
-       //BOTTOM
+       //CORNER
         case "corner":
             if (!document.querySelector("style#melonAds")){
                 const style = document.createElement("style");
                 style.id = "melonAds";
-                style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 40em; display: flex; margin-bottom: 1em; left: 50%; top: 0; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;} .melonAds-image-container{ width: 75%; height: 75%; margin-right: 0; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: -10px; top: -10px; border-radius: 50%; aspect-ratio: 1/9; background-color: red;color: white;}"
+                style.innerText = ".melonAds-banner{ z-index: 99999999; margin: auto; width: 40em; display: flex; margin-bottom: 1em; left: 50%; top: 0; transform:translateX(50%); position: fixed; aspect-ratio: 1/1; transition-property: bottom; transition-duration: 1s;} .melonAds-image-container{ width: 100%; height: 25%; margin-right: 0; overflow: hidden;} .melonAds-banner img{ width: 75%;} .melonAds-closeButton{ text-align: center; font-family: sans-serif; position: absolute; right: 0px; top: 0px; border-radius: 50%; aspect-ratio: 1/1; background-color: red;color: white;}"
                 document.body.prepend(style);
             }
                 break;
@@ -132,16 +134,16 @@
 // ****       Do not add a "," to the last file name
 // ******************************************************************************//
 
-verifiedAds = [ "side-3YrYLye.png",
-                "top-5lhydyw.png",
+verifiedAds = [ "top-3YrYLye.png",
+                "corner-5lhydyw.png",
                 "corner-6zThWbb.png",
                 "side-96H8nTV.png",
                 "top-fvStHFy.png",
                 "corner-IfbHv4Q.png",
                 "corner-ItsSnbk.png",
                 "top-kbPhzlY.png",
-                "side-kLwpaWL.png",
-                "corner-m0TQ3fo.png",
+                "corner-kLwpaWL.png",
+                "top-m0TQ3fo.png",
                 "corner-m5JlrL0.png",
                 "side-maE1OQk.png",
                 "corner-mB3fEew.png",
